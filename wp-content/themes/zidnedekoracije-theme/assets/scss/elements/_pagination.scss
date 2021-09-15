@@ -1,0 +1,30 @@
+.nav-links {
+  text-align: center;
+  width: 100%;
+
+  .page-numbers {
+    border: 2px solid $secondary-color;
+    color: $secondary-color;
+    display: inline-block;
+    height: 30px;
+    line-height: 1.7em;
+    margin: 0 3px;
+    min-width: 30px;
+    transition: .2s;
+
+    &:hover,
+    &.current {
+      background-color: $secondary-color;
+      color: #fff;
+    }
+
+    &.prev,
+    &.next {
+      background-color: transparent;
+      border: none;
+      color: $secondary-color;
+      height: auto;
+      width: auto;
+    }
+  }
+}

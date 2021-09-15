@@ -1,0 +1,65 @@
+@font-face {
+	font-family: "font-icons";
+	src: url('../assets/fonts/font-icons/font-icons.woff2') format('woff2'), url('../assets/fonts/font-icons/font-icons.woff') format('woff'), url('../assets/fonts/font-icons/font-icons.ttf') format('truetype');
+	font-display: swap;
+}
+
+@mixin icon-styles {
+	font-family: "font-icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == angle-down {
+		$char: "\E001";
+	}
+	@if $filename == angle-left {
+		$char: "\E002";
+	}
+	@if $filename == angle-right {
+		$char: "\E003";
+	}
+	@if $filename == angle-up {
+		$char: "\E004";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-angle-down {
+	@include icon(angle-down);
+}
+.icon-angle-left {
+	@include icon(angle-left);
+}
+.icon-angle-right {
+	@include icon(angle-right);
+}
+.icon-angle-up {
+	@include icon(angle-up);
+}
+

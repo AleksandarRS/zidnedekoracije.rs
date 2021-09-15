@@ -1,0 +1,32 @@
+.frm_radio, .frm_checkbox {
+	color: $black;
+	font-size: $font-size-small;
+	letter-spacing: 0;
+	line-height: 1.2em;
+	padding-left: 25px;
+	position: relative;
+	label {
+	  display: block;
+	}
+	input {
+	  opacity: 0;
+	  position: absolute;
+	  visibility: hidden;
+	  & + span span:first-child {
+		align-items: center;
+		border: 1px solid $primary-color;
+		display: inline-block;
+		height: 15px;
+		justify-content: center;
+		left: 0;
+		line-height: 1.3em;
+		position: absolute;
+		text-align: center;
+		top: 35%;
+		width: 15px;
+	  }
+	  &:checked + span span:first-child {
+		background-color: $primary-color;
+	  }
+	}
+  }

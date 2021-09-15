@@ -1,0 +1,129 @@
+* {
+
+	&:focus,
+	&:active,
+	&:hover {
+		outline: none;
+	}
+
+	&::before,
+	&::after {
+		/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+		box-sizing: inherit;
+	}
+}
+
+div,
+p,
+a,
+strong,
+i,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+sup,
+sub,
+section,
+footer,
+header,
+body {
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		-webkit-tap-highlight-color: transparent;
+	}
+}
+
+
+p {
+	margin-bottom: 1em;
+
+	&:first-of-type {
+		margin-top: 0;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1em;
+}
+
+address {
+	margin: 0 0 1em;
+}
+
+pre {
+	background: #eee;
+	font-family: 'Courier 10 Pitch', Courier, monospace;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+	font-size: 15px;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+ul,
+ol {
+	margin: 0;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li>ul,
+li>ol {
+	margin-bottom: 0;
+	margin-left: 0.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}

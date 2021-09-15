@@ -1,0 +1,71 @@
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='number'],
+input[type='tel'],
+input[type='range'],
+input[type='date'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='color'],
+textarea {
+  border: 1px solid;
+  border-radius: 0;
+  font-size: $font-size-base;
+  line-height: 1em;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+textarea {
+  resize: none;
+  padding-left: .6em;
+  width: 100%;
+}
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  border: 1px solid;
+  border-radius: 0;
+  font-family: $secondary-font;
+  font-size: $font-size-base;
+  line-height: 1.15em;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+
+/*---- Placeholder ----*/
+::-webkit-input-placeholder {
+  opacity: 1;
+}
+\:-moz-placeholder {
+  opacity: 1;
+}
+::-moz-placeholder {
+  opacity: 1;
+}
+\:-ms-input-placeholder {
+  opacity: 1;
+}
+*::-webkit-input-placeholder {
+  opacity: 1;
+}
+*:-moz-placeholder {
+  opacity: 1;
+}
+*:-ms-input-placeholder {
+  opacity: 1;
+}
+
+fieldset {
+    min-width: 0;
+}

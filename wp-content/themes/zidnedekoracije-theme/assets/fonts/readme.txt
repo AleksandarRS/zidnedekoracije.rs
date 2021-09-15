@@ -1,0 +1,1 @@
+For each font create specific folder name and use it in _variables.scss

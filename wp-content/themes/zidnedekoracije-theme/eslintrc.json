@@ -1,0 +1,26 @@
+{
+	"extends": [ "plugin:@wordpress/eslint-plugin/recommended" ],
+	"overrides": [
+		{
+			"files": ["./assets/js/core/*.js", "./assets/js/site/*.js", "./assets/js/site.js"],
+			"excludedFiles": [ "./assets/js/plugins/*.js" ]
+		}
+	],
+	"env": {
+		"jquery": true
+	},
+	"rules": {
+		"indent": ["error", 2],
+		"no-nested-ternary": 0
+	},
+	"globals": {
+		"jQuery" : "readonly",
+		"$" : true,
+		"navigator": true,
+		"location": true,
+		"screen": true,
+		"XMLHttpRequest": true,
+		"google": true,
+		"theme": true
+	}
+}
