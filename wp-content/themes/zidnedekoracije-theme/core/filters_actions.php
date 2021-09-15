@@ -202,16 +202,16 @@ if (!function_exists('lf_acf_init')):
         
         if( defined('ACF_GOOGLE_API_KEY') ){
             acf_update_setting('google_api_key', ACF_GOOGLE_API_KEY);
-        } else{
-            if( is_admin() ){
-                add_action( 'admin_notices', function(){
+        } else {
+            // if( is_admin() ){
+            //     add_action( 'admin_notices', function(){
                     ?>
-                    <div class="notice notice-error is-dismissible">
-                        <p><?php _e( "Please define ACF_GOOGLE_API_KEY in wp-config.php: <strong>define('ACF_GOOGLE_API_KEY', 'YOUR_API_KEY_HERE');</strong>", 'magicwalls' ); ?></p>
-                    </div>
+                    <!-- <div class="notice notice-error is-dismissible">
+                        <p><?php //_e( "Please define ACF_GOOGLE_API_KEY in wp-config.php: <strong>define('ACF_GOOGLE_API_KEY', 'YOUR_API_KEY_HERE');</strong>", 'magicwalls' ); ?></p>
+                    </div> -->
                     <?php
-                } );
-            }
+            //     } );
+            // }
         }
     }
 
